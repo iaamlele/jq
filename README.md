@@ -1,19 +1,19 @@
 <a name="FPdoK"></a>
-# jq - A JavaScript Library to Simulate jQuery
+# simplijq - A JavaScript Library to Simulate jQuery
 <a name="mm03G"></a>
 ## Description
-jq is a lightweight JavaScript library that simulates the basic functionalities of jQuery.
+simplijq is a lightweight JavaScript library that simulates the basic functionalities of jQuery.
 <a name="PzpGv"></a>
 ## Installation
 ```
-npm install jq
+npm install simplijq
 ```
 <a name="kMaaj"></a>
 ## Usage
 <a name="JqG4S"></a>
 ### Basic Usage
 ```
-import jq from 'jq';
+import jq from 'simplijq';
 
 const $ = jq;
 
@@ -29,14 +29,14 @@ $(document).ready(function() {
 - **show()**: Shows the selected elements.
 <a name="LCJTM"></a>
 ### Example
-Here is an example of using `jq` in an HTML file:
+Here is an example of using `simplijq` in an HTML file:
 ```
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Test Library jq</title>
+  <title>Test Library simplijq</title>
 </head>
 <body>
   <button class="btn">click me!</button>
@@ -47,7 +47,7 @@ Here is an example of using `jq` in an HTML file:
 ```
 And in your JavaScript file:
 ```
-import jq from 'jq';
+import jq from 'simplijq';
 
 const $ = jq;
 
@@ -68,7 +68,7 @@ npm link
 ```
 npm link jq
 ```
-3.Now you can import and use `jq` in your test project.
+3.Now you can import and use `simplijq` in your test project.
 <a name="build-and-serve"></a>
 ### Build and Serve
 To build and serve the library, run the following commands in the library directory:
