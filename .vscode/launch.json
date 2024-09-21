@@ -5,31 +5,29 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch index.html",
-            "type": "firefox",
-            "request": "launch",
-            "reAttach": true,
-            "file": "${workspaceFolder}/index.html"
-        },
-        {
-            "name": "Launch localhost",
-            "type": "firefox",
-            "request": "launch",
-            "reAttach": true,
-            "url": "http://localhost/index.html",
+            "name": "Attach to Chrome",
+            "port": 9222,
+            "request": "attach",
+            "type": "chrome",
             "webRoot": "${workspaceFolder}"
         },
         {
-            "name": "Attach",
-            "type": "firefox",
-            "request": "attach"
-        },
-        {
-            "name": "Launch WebExtension",
-            "type": "firefox",
+            "name": "Launch Chrome",
             "request": "launch",
-            "reAttach": true,
-            "addonPath": "${workspaceFolder}"
+            "type": "chrome",
+            "url": "http://localhost:5501",
+            "webRoot": "${workspaceFolder}"
+        },
+
+        {
+            "name": "Launch Chrome against localhost",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:5501/src/",
+            "webRoot": "${workspaceFolder}",
+            "sourceMaps": true,
+            "trace": true // 可选：用于生成更详细的调试日志
         }
+          
     ]
 }

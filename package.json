@@ -1,4 +1,32 @@
 {
+  "name": "jq",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Modern, lightweight jquery with more elegant syntax",
+  "keywords": [
+    "jquery",
+    "dom",
+    "es6",
+    "es-module",
+    "ajax",
+    "animate"
+  ],
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "watch": "webpack --watch",
+    "start": "webpack serve --open",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iaamlele/jq.git"
+  },
+  "author": "iaamlele",
+  "license": "ISC",
+  "directories": {
+    "test": "test"
+  },
   "dependencies": {
     "js": "^0.1.0"
   },
@@ -8,6 +36,7 @@
     "eslint": "^9.8.0",
     "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.0",
+    "jest": "^29.7.0",
     "json5": "^2.2.3",
     "lodash": "^4.17.21",
     "style-loader": "^4.0.0",
@@ -17,26 +46,5 @@
     "webpack-dev-server": "^5.0.4",
     "xml-loader": "^1.2.1",
     "yamljs": "^0.3.0"
-  },
-  "name": "simplijq",
-  "version": "1.0.0",
-  "main": "dist/jq-webpack.js",
-  "private": false,
-  "description": " - A JavaScript Library to Simulate jQuery",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "webpack --watch",
-    "start": "webpack serve --open",
-    "build": "webpack"
-  },
-  "keywords": [],
-  "author": "iaamlele",
-  "license": "ISC",
-  "directories": {
-    "test": "test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/iaamlele/jq.git"
   }
 }
