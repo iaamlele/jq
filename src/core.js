@@ -1,55 +1,31 @@
+import {SYM_NODE_LIST} from './utils/symbol.js'
+import hide from './api/hide.js'
+import show from './api/show.js'
+import ready from './api/ready.js'
+
 export default class Core{
     constructor(selector) {
         if(selector === document || selector instanceof Node) {
-            this.selector = [selector];
+            this[SYM_NODE_LIST] = [selector];
+            console.log("OOO", this[SYM_NODE_LIST]);
         }else if(selector instanceof NodeList) {
-            this.selector = [...document.querySelectorAll(selector)];
+            this[SYM_NODE_LIST] = [...document.querySelectorAll(selector)];
         }else if(typeof selector === 'string') {
-            this.selector = [...document.querySelectorAll(selector)];
+            console.log("string:", selector);
+            this[SYM_NODE_LIST] = [...document.querySelectorAll(selector)];
+            console.log("III", this[SYM_NODE_LIST]);
         }else if(selector === undefined) {
-            this.selector = [];
+            this[SYM_NODE_LIST] = [];
         }else {
             throw new Error('Parameter error.');
         }
-    }
-
-    hide() {
-        if(this.selector instanceof HTMLCollection || this.selector instanceof NodeList) {
-            for(let i = 0; i < this.selector.length; i++) {
-                this.selector[i].style.visibility = 'hidden';
-            }
-        }else {
-            this.selector.style.visibility = 'hidden';
-        }
-        
         return this;
     }
-
-    show() {
-        if(this.selector instanceof HTMLCollection || this.selector instanceof NodeList) {
-            for(let i = 0; i < this.arg.length; i++) {
-                this.selector[i].style.visibility = 'visible';
-            }
-        }else {
-            this.selector.style.visibility = 'visible';
-        }
-        
-        return this;
-    }
-
-    ready(f) {
-        if(this.selector === document) {
-            return document.addEventListener("DOMContentLoaded", f);
-        }else {
-            return null;
-        }
-        
-    }
-
-    // return function(arg) {
-    //     return new Jquery(arg);
-    // }
 }
+
+Core.prototype.hide = hide;
+Core.prototype.ready = ready;
+Core.prototype.show = show;
 
 // const $ = (function() {
 //     class Jquery{
