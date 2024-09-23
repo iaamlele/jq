@@ -1,0 +1,6 @@
+{
+    // 这告诉 Babel 使用 @babel/preset-env 进行转译，同时启用 istanbul 插件来生成代码覆盖率报告。
+    "presets": ["@babel/preset-env"],
+    "plugins": ["istanbul"]
+}
+  

@@ -1,7 +1,6 @@
 {
   "name": "jq",
   "version": "0.1.0",
-  "type": "module",
   "description": "Modern, lightweight jquery with more elegant syntax",
   "keywords": [
     "jquery",
@@ -31,6 +30,10 @@
     "js": "^0.1.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.4",
+    "babel-loader": "^9.2.1",
+    "babel-plugin-istanbul": "^7.0.0",
     "chai": "^5.1.1",
     "css-loader": "^7.1.2",
     "csv-loader": "^3.0.5",
@@ -46,6 +49,7 @@
     "karma-webpack": "^5.0.1",
     "lodash": "^4.17.21",
     "mocha": "^10.7.3",
+    "puppeteer": "^23.4.0",
     "style-loader": "^4.0.0",
     "toml": "^3.0.0",
     "webpack": "^5.93.0",
