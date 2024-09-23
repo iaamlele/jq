@@ -1,7 +1,7 @@
 import {expect} from 'chai'
 import $ from '../../src/index.js'
 
-describe('Hide Elements', () => {
+describe('Core class testing', () => {
     before(() => {
         document.body.innerHTML = '<div id="test-id" class="test-class">Test Element</div>'
     })
