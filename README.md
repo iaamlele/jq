@@ -1,5 +1,5 @@
 <a name="FPdoK"></a>
-# simplijq - A JavaScript Library to Simulate jQuery
+# jq - A JavaScript Library to Simulate jQuery
 <a name="mm03G"></a>
 ## Description
 simplijq is a lightweight JavaScript library that simulates the basic functionalities of jQuery.
